@@ -1,0 +1,23 @@
+CREATE TABLE clothing_store (ID INTEGER, color TEXT, description TEXT, price NUMERIC, aisle_number INTEGER);
+
+INSERT INTO clothing_store VALUES(1001, "blue", "tee_shirt", 3.99, 1);
+INSERT INTO clothing_store VALUES(2001, "green", "tee_shirt", 3.99, 1);
+INSERT INTO clothing_store VALUES(3001, "orange", "tee_shirt", 3.99, 1);
+INSERT INTO clothing_store VALUES(4001, "red", "tee_shirt", 3.99,1);
+INSERT INTO clothing_store VALUES(5001, "black", "tee_shirt", 3.99,1);
+INSERT INTO clothing_store VALUES(1002, "dark_blue", "shorts_denim", 7.99, 2);
+INSERT INTO clothing_store VALUES(2002, "light_blue", "shorts_denim", 7.99,2);
+INSERT INTO clothing_store VALUES(3002, "black", "shorts_denim", 7.99, 2); 
+INSERT INTO clothing_store VALUES(4002, "mauve", "shorts_linen", 9.99, 2);
+INSERT INTO clothing_store VALUES(5002, "white", "shorts_linen", 9.99,2);
+INSERT INTO clothing_store VALUES(1003, "dark_blue", "pants_denim", 12.99, 3);
+INSERT INTO clothing_store VALUES(2003, "light_blue", "pants_denim", 12.99, 3);
+INSERT INTO clothing_store VALUES(3003, "black", "pants_denim", 12.99, 3);
+INSERT INTO clothing_store VALUES(4003, "acid_wash", "pants_denim", 14.99, 3);
+INSERT INTO clothing_store VALUES(5003, "white", "pants_denim", 14.99, 3);
+
+SELECT * FROM clothing_store;
+
+SELECT* FROM clothing_store ORDER BY price DESC, ID DESC;
+
+SELECT SUM (price), COUNT (ID) FROM clothing_store;
