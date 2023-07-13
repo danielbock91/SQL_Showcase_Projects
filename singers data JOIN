@@ -1,0 +1,42 @@
+CREATE TABLE singers ( 
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    net_worth INTEGER,
+    age INTEGER,
+    country TEXT);
+    
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "Rihanna", 1007000000, 34, "American");
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "Paul_McCartney", 1005000000, 80, "English");    
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "Jay_Z", 1003000000, 53, "American");   
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "Andrew_Lloyd_Webber", 1003000000, 74, "English");    
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "P_Diddy", 930000000, 53, "American"); 
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "Herb_Alpert", 900000000, 87, "American"); INSERT INTO singers (name, net_worth, age, country) VALUES ( "Madonna", 850000000, 64, "American"); 
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "Bono", 800000000, 62, "Irish"); 
+INSERT INTO singers (name, net_worth, age, country) VALUES ( "Celine_Dion", 800000000, 54, "Canadian"); INSERT INTO singers (name, net_worth, age, country) VALUES ( "Bruce_Springsteen", 700000000, 73, "American"); 
+    
+
+ CREATE TABLE genre ( 
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    category TEXT,
+    value INTEGER,
+    name TEXT);
+    
+INSERT INTO genre (category, value, name)
+    VALUES ( "pop", 6700000000, "Rihanna");
+INSERT INTO genre (category, value, name)
+    VALUES ( "rock", 5250000000, "Paul_McCartney");
+INSERT INTO genre (category, value, name)
+    VALUES ( "hip_hop", 1190000000, "P_Diddy");    
+INSERT INTO genre (category, value, name)
+    VALUES ( "classical", 1080000000, "Bono");   
+INSERT INTO genre (category, value, name)
+    VALUES ( "dance", 1340000000, "Madonna");
+    
+SELECT singers.name, singers.net_worth, genre.category FROM genre
+    JOIN singers
+    ON genre.name = singers.name;
+    
+SELECT genre.value, genre.category, singers.country FROM singers
+    JOIN genre
+    ON singers.name = genre.name
+    
