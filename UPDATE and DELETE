@@ -1,0 +1,35 @@
+CREATE TABLE running_daily
+    (id INTEGER PRIMARY KEY AUTOINCREMENT,
+    day TEXT,
+    miles_ran INTEGER);
+    
+INSERT INTO running_daily (day, miles_ran)
+    VALUES ("sunday", 8);
+INSERT INTO running_daily (day, miles_ran)
+    VALUES ("monday", 2);
+INSERT INTO running_daily (day, miles_ran)
+    VALUES ("tuesday", 0);
+INSERT INTO running_daily (day, miles_ran)
+    VALUES ("wednesday", 0);
+INSERT INTO running_daily (day, miles_ran)
+    VALUES ("thursday", 3);
+INSERT INTO running_daily (day, miles_ran)
+    VALUES ("friday", 5);
+INSERT INTO running_daily (day, miles_ran)
+    VALUES ("saturday", 0);
+    
+SELECT * FROM running_daily;
+
+UPDATE running_daily SET miles_ran = 10
+WHERE miles_ran = 8;
+UPDATE running_daily SET miles_ran = 6
+WHERE miles_ran = 3;
+
+SELECT * FROM running_daily;
+
+DELETE FROM running_daily
+WHERE miles_ran = 5;
+
+SELECT * FROM running_daily
+
+    
